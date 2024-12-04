@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Romantic Date</title>
+  <title>Special Date for Vaishu and Liku</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="hearts"></div>
   <div class="container">
-    <h1>Vaishu Putta, Will You Go on a Date with Me?</h1>
-    <p>Every moment with you is magical. Let’s create a new beginning together.</p>
-    <div class="buttons">
-      <button onclick="showLoveLetter()">Yes</button>
-      <button onclick="showLoveLetter()">Of Course, Yes</button>
-      <button class="no-btn" onclick="moveNoButton()">No</button>
+    <div class="hearts"></div>
+    <div class="content">
+      <h1>I Love You, Vaishu Putta ❤️</h1>
+      <p>This date is special because it's a new beginning for us, filled with love, joy, and promises for the future.</p>
+      <div class="options">
+        <button onclick="showLoveLetter('yes')">Yes</button>
+        <button onclick="showLoveLetter('ofCourse')">Of Course, Yes</button>
+        <button id="no-button">No</button>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
