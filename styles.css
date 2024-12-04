@@ -1,112 +1,78 @@
-/* General Body Styling */
-/* General Body Styling */
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #ff4d4d; /* Pleasant red background */
+  background-color: red;
   overflow: hidden;
 }
 
-/* Container Styling */
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.content {
   text-align: center;
-  margin-top: 15vh;
   color: white;
 }
 
-/* Floating Hearts Animation */
-.hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.heart {
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  transform: rotate(45deg);
-  position: absolute;
-  animation: float 6s linear infinite;
-}
-
-.heart::before,
-.heart::after {
-  content: '';
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-}
-
-.heart::before {
-  top: -15px;
-  left: 0;
-}
-
-.heart::after {
-  top: 0;
-  left: -15px;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0) rotate(45deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-500px) rotate(45deg);
-    opacity: 0;
-  }
-}
-
-/* Main Heading and Text */
 h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  color: #fff;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 p {
   font-size: 1.5rem;
-  margin: 0 auto;
-  width: 80%;
-  color: #fff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
 }
 
-/* Buttons Styling */
-.buttons button {
-  font-size: 1.5rem;
-  padding: 10px 20px;
+.options button {
+  padding: 15px 30px;
   margin: 10px;
+  font-size: 1.2rem;
+  background-color: white;
   border: none;
-  border-radius: 50px;
-  background: #fff;
-  color: #ff4d4d;
+  border-radius: 10px;
+  color: red;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.buttons button:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+.options button:hover {
+  background-color: pink;
 }
 
-/* Moving "No" Button */
-.no-btn {
-  position: relative;
-  background: #ff4d4d;
-  color: #fff;
+#no-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveAround 5s infinite;
 }
 
-.no-btn:hover {
-  transform: translateX(10px);
+@keyframes moveAround {
+  0% { top: 50%; left: 50%; }
+  25% { top: 20%; left: 70%; }
+  50% { top: 80%; left: 20%; }
+  75% { top: 30%; left: 10%; }
+  100% { top: 50%; left: 50%; }
 }
+
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/heart-pattern.png');
+  background-size: contain;
+  animation: floatHearts 10s linear infinite;
+}
+
+@keyframes floatHearts {
+  from { background-position: 0 0; }
+  to { background-position: 0 -100%; }
+}
+
 
