@@ -4,17 +4,20 @@ body {
   padding: 0;
   font-family: 'Arial', sans-serif;
   background-color: #ff4d4d;
-  color: white;
+  background-image: url('https://drive.google.com/uc?export=view&id=1oJ-CqLPWbY9Jq3ZfW7Hm4XNzpMPgFMuX');
+  background-size: cover;  /* Ensures the image covers the whole screen */
+  background-position: center;  /* Centers the background image */
   overflow: hidden;
 }
 
 /* Container Styling */
 .container {
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 15vh;
+  color: white;
 }
 
-/* Hearts Animation */
+/* Floating Hearts Animation */
 .hearts {
   position: fixed;
   top: 0;
@@ -23,8 +26,8 @@ body {
   height: 100%;
   z-index: -1;
   background: url('https://i.imgur.com/fuuyAKp.png') repeat;
-  animation: float 10s linear infinite;
-  opacity: 0.2;
+  animation: float 8s linear infinite;
+  opacity: 0.3;
 }
 
 @keyframes float {
@@ -32,39 +35,42 @@ body {
     background-position: 0 0;
   }
   100% {
-    background-position: 0 100%;
+    background-position: 0 200%;
   }
 }
 
-/* Main Heading */
+/* Main Heading and Text */
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 p {
   font-size: 1.5rem;
-  margin: 20px auto;
+  margin: 0 auto;
   width: 80%;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Button Styling */
+/* Buttons Styling */
 .buttons button {
   font-size: 1.5rem;
   padding: 10px 20px;
   margin: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   background: #fff;
   color: #ff4d4d;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .buttons button:hover {
   transform: scale(1.1);
-  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
 }
 
 /* Moving "No" Button */
